@@ -47,11 +47,16 @@ def flatpak_search(app_id, remote):
     output = process.communicate()[0].decode('utf8').splitlines()
     status = process.returncode
     d = None
+    found = False
     if status == 0:
         for line in output:
             line = line.strip()
-            name, description, res_app_id, version, res_remote = line.split('\t')
-        if res_app_id == app_id and res_remote == remote:
+            try:
+                name, description, res_app_id, version, res_remote = line.split('\t')
+                found = True
+            except ValueError:
+                found = False
+        if found and res_app_id == app_id and res_remote == remote:
             d = {'name': name,
                  'remote': remote,
                  'app_id': app_id,
