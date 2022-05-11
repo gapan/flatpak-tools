@@ -3,7 +3,8 @@
 
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk
+gi.require_version('Vte', '2.91')
+from gi.repository import Gtk, GLib, Pango, Vte
 import subprocess
 import sys
 import os
@@ -32,7 +33,7 @@ def mimetype_is_flatpakref(filename):
 
 def check_args(args):
     if len(args) != 2 or not args[1].endswith('.flatpakref'):
-        print(_("ERROR:") + " invalid arguments")
+        print(_("ERROR:") + " " + _("invalid arguments"))
         print()
         print_help()
         sys.exit(1)
@@ -52,6 +53,8 @@ def flatpak_search(app_id, remote):
             name, description, res_app_id, version, res_remote = line.split('\t')
         if res_app_id == app_id and res_remote == remote:
             d = {'name': name,
+                 'remote': remote,
+                 'app_id': app_id,
                  'description': description,
                  'version': version}
             return True, d
@@ -86,15 +89,36 @@ class FlatpakrefInstaller:
     # Main window signals
     #
     def on_button_install_clicked(self, widget, data=None):
-        print('install')
+        self.vte_term = Vte.Terminal()
+        self.box_vte.add(self.vte_term)
+        self.vte_term.set_sensitive(False)
+        self.vte_term.set_size(80, 25)
+        self.vte_term.set_font(Pango.FontDescription('Monospace 12'))
+        self.vte_term.connect('child-exited', self.on_vte_child_exited_cb)
+        self.vte_term.show()
+        self.window_install.show()
+        args = ['/usr/bin/flatpak', 'install', '-y',
+            self.flatpak_details['remote'], self.flatpak_details['app_id']]
+        self.vte_term.spawn_async(
+            Vte.PtyFlags.DEFAULT, # Pty Flags
+            os.environ['HOME'], # Working DIR
+            args, # Command/BIN (argv)
+            None, # Environmental Variables (envv)
+            GLib.SpawnFlags.DEFAULT, # Spawn Flags
+            None, None, # Child Setup
+            GLib.MAXINT, # Timeout (-1 for indefinitely)
+            None, # Cancellable
+            None, # Callback
+            None # User Data
+        )
 
     def on_button_cancel_clicked(self, widget, data=None):
-        Gtk.main_quit()
+        self.gtk_main_quit()
 
     def on_button_about_clicked(self, widget, data=None):
         self.window_about.show()
 
-    def gtk_main_quit(self, widget, data=None):
+    def gtk_main_quit(self):
         Gtk.main_quit()
 
     #
@@ -106,6 +130,40 @@ class FlatpakrefInstaller:
     def on_window_about_delete_event(self, widget, event):
         self.window_about.hide()
         return True
+
+    #
+    # Error window signals
+    #
+    def on_button_error_exit_clicked(self, widget, data=None):
+        self.gtk_main_quit()
+
+    #
+    # Installation window signals
+    #
+    def on_button_install_cancel_clicked(self, widget, data=None):
+        self.installation_cancelled_by_user = True
+        self.box_vte.remove(self.vte_term)
+        self.window_install.hide()
+        self.vte_term.destroy()
+
+    def on_vte_child_exited_cb(self, terminal, status=None):
+        self.box_vte.remove(self.vte_term)
+        self.window_main.hide()
+        self.window_install.hide()
+        self.vte_term.destroy()
+        # for some reason the child exit status is times 256 the actual one
+        if status == 0:
+            self.gtk_main_quit()
+        else:
+            if self.installation_cancelled_by_user:
+                self.gtk_main_quit()
+            else:
+                self.label_error.set_text(
+                    _("There was an error while installing the Flatpak.") + \
+                            " " + _("Installation cannot be completed.") + \
+                            "\n\n" + _("Error code: ") + str(status))
+                self.window_error.show()
+
 
     def __init__(self, flatpakref_file):
         builder = Gtk.Builder()
@@ -124,18 +182,34 @@ class FlatpakrefInstaller:
 
         self.window_about=builder.get_object('window_about')
 
+        self.window_error = builder.get_object('window_error')
+        self.label_error = builder.get_object('label_error')
+
+        self.window_install = builder.get_object('window_install')
+        self.box_vte = builder.get_object('box_vte')
+        self.installation_cancelled_by_user = False
+
         builder.connect_signals(self)
 
         valid, app_id, remote = flatpakref_is_valid(flatpakref_file)
+        found = False
         if valid:
-            found, d = flatpak_search(app_id, remote)
-        if found:
-            self.label_name.set_text(d['name'])
-            self.label_description.set_text(d['description'])
-            self.label_app_id.set_text(app_id)
-            self.label_version.set_text(d['version'])
+            found, self.flatpak_details = flatpak_search(app_id, remote)
         else:
-            pass
+            self.label_error.set_text(
+                _("The Flatpak reference file is not valid.") + \
+                        " " + _("Installation cannot be completed."))
+            self.window_error.show()
+        if found:
+            self.label_name.set_text(self.flatpak_details['name'])
+            self.label_description.set_text(self.flatpak_details['description'])
+            self.label_app_id.set_text(app_id)
+            self.label_version.set_text(self.flatpak_details['version'])
+        else:
+            self.label_error.set_text(
+                _("Flatpak not found.") + \
+                        " " + _("Installation cannot be completed."))
+            self.window_error.show()
 
 
 if __name__ == "__main__":
