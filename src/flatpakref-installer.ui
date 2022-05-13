@@ -302,7 +302,7 @@
     <property name="skip-taskbar-hint">True</property>
     <property name="transient-for">window_main</property>
     <property name="program-name">flatpakref-installer</property>
-    <property name="copyright" translatable="yes">Copyright © 2022 George Vlahavas</property>
+    <property name="copyright">Copyright © 2022 George Vlahavas</property>
     <property name="comments" translatable="yes">A simple installer for .flatpakref files</property>
     <property name="authors">George Vlahavas &lt;vlahavas@gmail.com&gt;</property>
     <property name="translator-credits" translatable="yes">translator-credits</property>
