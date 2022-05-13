@@ -6,7 +6,7 @@ don't have flatpak integration in their main package manager, or as a
 lighter alternative.
 
 For now, included are:
-* flatpakref-installer: a tool that allows to open a Flatpak reference
+* **flatpakref-installer**: a tool that allows to open a Flatpak reference
 file (.flatpakref) and install the respective flatpak.
 
 # Translations
