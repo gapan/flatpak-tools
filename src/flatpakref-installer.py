@@ -102,8 +102,9 @@ class FlatpakrefInstaller:
         self.vte_term.connect('child-exited', self.on_vte_child_exited_cb)
         self.vte_term.show()
         self.window_install.show()
-        args = ['/usr/bin/flatpak', 'install', '-y',
-            self.flatpak_details['remote'], self.flatpak_details['app_id']]
+        args = ['/usr/bin/flatpak', 'install', '-y', '--reinstall',
+            '--or-update', self.flatpak_details['remote'],
+            self.flatpak_details['app_id']]
         self.vte_term.spawn_async(
             Vte.PtyFlags.DEFAULT, # Pty Flags
             os.environ['HOME'], # Working DIR
