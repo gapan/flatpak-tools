@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=MimeType
+MimeType=application/vnd.flatpak.repo
+Icon=text-plain
+Patterns=*.flatpakref;
+
+Comment=Flatpak repository file

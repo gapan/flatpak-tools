@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=MimeType
+MimeType=application/vnd.flatpak.ref
+Icon=package-x-generic
+Patterns=*.flatpakref;
+
+Comment=Flatpak reference file
