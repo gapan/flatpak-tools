@@ -175,9 +175,9 @@ class FlatpakrefInstaller:
         builder.set_translation_domain("flatpakref-installer")
         if os.path.exists('flatpakref-installer.ui'):
             builder.add_from_file('flatpakref-installer.ui')
-        elif os.path.exists('/usr/share/flatpak-tools/flatpakref-installer/flatpakref-installer.ui'):
+        elif os.path.exists('/usr/share/flatpak-tools/flatpakref-installer.ui'):
             builder.add_from_file(
-                '/usr/share/flatpak-tools/flatpakref-installer/flatpakref-installer.ui')
+                '/usr/share/flatpak-tools/flatpakref-installer.ui')
         self.window_main = builder.get_object('window_main')
 
         self.label_name = builder.get_object('label_name')
