@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# gapan <vlahavas@gmail.com>, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-13 15:38+0300\n"
+"PO-Revision-Date: 2022-05-13 18:36+0000\n"
+"Last-Translator: gapan <vlahavas@gmail.com>, 2022\n"
+"Language-Team: Greek (https://www.transifex.com/gapan/teams/137470/el/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/flatpakref-installer.ui:7
+msgid "Installing Flatpak..."
+msgstr "Γίνεται εγκατάσταση του flatpak..."
+
+#: src/flatpakref-installer.ui:23 src/flatpakref-installer.ui:249
+msgid "Cancel"
+msgstr "Άκυρο"
+
+#: src/flatpakref-installer.ui:50 flatpakref-installer.desktop.in.h:1
+msgid "Flatpak Installer"
+msgstr "Εγκαταστάτης Flatpak"
+
+#: src/flatpakref-installer.ui:73
+msgid "The following software will be installed:"
+msgstr "Το παρακάτω λογισμικό θα εγκατασταθεί:"
+
+#: src/flatpakref-installer.ui:95
+msgid "Name:"
+msgstr "Όνομα:"
+
+#: src/flatpakref-installer.ui:110
+msgid "Description:"
+msgstr "Περιγραφή:"
+
+#: src/flatpakref-installer.ui:125
+msgid "Application ID:"
+msgstr "Ταυτότητα εφαρμογής:"
+
+#: src/flatpakref-installer.ui:140
+msgid "Version:"
+msgstr "Έκδοση:"
+
+#: src/flatpakref-installer.ui:206
+msgid "Do you want to proceed with the installation?"
+msgstr "Θέλετε να προχωρήσετε με την εγκατάσταση;"
+
+#: src/flatpakref-installer.ui:228
+msgid "About"
+msgstr "Περί"
+
+#: src/flatpakref-installer.ui:263
+msgid "Install"
+msgstr "Εγκατάσταση"
+
+#: src/flatpakref-installer.ui:306
+msgid "A simple installer for .flatpakref files"
+msgstr "Ένα απλό πρόγραμμα εγκατάστασης αρχείων .flatpakref"
+
+#: src/flatpakref-installer.ui:308
+msgid "translator-credits"
+msgstr "Γιώργος Βλαχάβας <vlahavas~at~gmail~dot~com>"
+
+#: src/flatpakref-installer.ui:332
+msgid "Flatpak Installation Error"
+msgstr "Σφάλμα κατά την εγκατάσταση του flatpak"
+
+#: src/flatpakref-installer.ui:350
+msgid "Exit"
+msgstr "Έξοδος"
+
+#: src/flatpakref-installer.py:22
+msgid "USAGE:"
+msgstr "ΧΡΗΣΗ:"
+
+#: src/flatpakref-installer.py:36
+msgid "ERROR:"
+msgstr "ΣΦΑΛΜΑ:"
+
+#: src/flatpakref-installer.py:36
+msgid "invalid arguments"
+msgstr "Μη έγκυροι παράμετροι"
+
+#: src/flatpakref-installer.py:167
+msgid "There was an error while installing the Flatpak."
+msgstr "Υπήρξε ένα σφάλμα κατά την εγκατάσταση του flatpak."
+
+#: src/flatpakref-installer.py:168 src/flatpakref-installer.py:206
+#: src/flatpakref-installer.py:216
+msgid "Installation cannot be completed."
+msgstr "Η εγκατάσταση δεν μπορεί να ολοκληρωθεί."
+
+#: src/flatpakref-installer.py:169
+msgid "Error code: "
+msgstr "Κωδικός σφάλματος:"
+
+#: src/flatpakref-installer.py:205
+msgid "The Flatpak reference file is not valid."
+msgstr "Το αρχείο αναφοράς flatpak δεν είναι έγκυρο."
+
+#: src/flatpakref-installer.py:215
+msgid "Flatpak not found."
+msgstr "Το flatpak δεν βρέθηκε."
