@@ -1,0 +1,9 @@
+[Desktop Entry]
+_Name=Flatpak Installer
+Exec=flatpakref-installer %U
+Terminal=false
+Type=Application
+Icon=applications-system
+Categories=Application;System;
+MimeType=application/vnd.flatpak.ref;
+NoDisplay=true
