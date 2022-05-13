@@ -9,6 +9,13 @@ For now, included are:
 * flatpakref-installer: a tool that allows to open a Flatpak reference
 file (.flatpakref) and install the respective flatpak.
 
+# Translations
+
+To help with translating this project to your language, please visit the
+project's page at Transifex:
+
+https://www.transifex.com/gapan/flatpak-tools/dashboard/
+
 # Dependencies
 
 * GTK+3 3.24.x
