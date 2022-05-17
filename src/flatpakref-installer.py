@@ -97,7 +97,7 @@ class FlatpakrefInstaller:
         self.vte_term = Vte.Terminal()
         self.box_vte.add(self.vte_term)
         self.vte_term.set_sensitive(False)
-        self.vte_term.set_size(80, 25)
+        self.vte_term.set_size(100, 25)
         self.vte_term.set_font(Pango.FontDescription('Monospace 12'))
         self.vte_term.connect('child-exited', self.on_vte_child_exited_cb)
         self.vte_term.show()
