@@ -375,6 +375,7 @@
               <object class="GtkImage">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
+                <property name="pixel-size">48</property>
                 <property name="icon-name">dialog-error</property>
                 <property name="icon_size">6</property>
               </object>
