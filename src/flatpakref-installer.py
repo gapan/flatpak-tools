@@ -156,7 +156,7 @@ class FlatpakrefInstaller:
         self.vte_term.destroy()
         # for some reason the child exit status is times 256 the actual one
         if status == 0:
-            self.gtk_main_quit()
+            self.window_success.show()
         else:
             if self.installation_cancelled_by_user:
                 self.gtk_main_quit()
@@ -179,6 +179,17 @@ class FlatpakrefInstaller:
 
     def on_button_confirm_cancel_continue_clicked(self, widget, data=None):
         self.window_confirm_cancel.hide()
+        self.gtk_main_quit()
+
+    #
+    # Success window
+    #
+    def on_button_success_exit_clicked(self, widget, data=None):
+        self.gtk_main_quit()
+
+    def on_window_success_delete_event(self, widget, event):
+        self.gtk_main_quit()
+        return True
 
 
     def __init__(self, flatpakref_file):
@@ -206,6 +217,8 @@ class FlatpakrefInstaller:
         self.installation_cancelled_by_user = False
 
         self.window_confirm_cancel = builder.get_object('window_confirm_cancel')
+
+        self.window_success = builder.get_object('window_success')
 
         builder.connect_signals(self)
 
