@@ -147,10 +147,7 @@ class FlatpakrefInstaller:
     # Installation window signals
     #
     def on_button_install_cancel_clicked(self, widget, data=None):
-        self.installation_cancelled_by_user = True
-        self.box_vte.remove(self.vte_term)
-        self.window_install.hide()
-        self.vte_term.destroy()
+        self.window_confirm_cancel.show()
 
     def on_vte_child_exited_cb(self, terminal, status=None):
         self.box_vte.remove(self.vte_term)
@@ -169,6 +166,19 @@ class FlatpakrefInstaller:
                             " " + _("Installation cannot be completed.") + \
                             "\n\n" + _("Error code: ") + str(status))
                 self.window_error.show()
+
+    #
+    # Cancel confirmation window
+    #
+    def on_button_confirm_cancel_cancel_clicked(self, widget, data=None):
+        self.window_confirm_cancel.hide()
+        self.installation_cancelled_by_user = True
+        self.box_vte.remove(self.vte_term)
+        self.window_install.hide()
+        self.vte_term.destroy()
+
+    def on_button_confirm_cancel_continue_clicked(self, widget, data=None):
+        self.window_confirm_cancel.hide()
 
 
     def __init__(self, flatpakref_file):
@@ -194,6 +204,8 @@ class FlatpakrefInstaller:
         self.window_install = builder.get_object('window_install')
         self.box_vte = builder.get_object('box_vte')
         self.installation_cancelled_by_user = False
+
+        self.window_confirm_cancel = builder.get_object('window_confirm_cancel')
 
         builder.connect_signals(self)
 
