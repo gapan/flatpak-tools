@@ -164,7 +164,7 @@ class FlatpakrefInstaller:
                 self.label_error.set_text(
                     _("There was an error while installing the Flatpak.") + \
                             " " + _("Installation cannot be completed.") + \
-                            "\n\n" + _("Error code: ") + str(status))
+                            "\n\n" + _("Error code:") + " " + str(status))
                 self.window_error.show()
 
     #

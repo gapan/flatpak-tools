@@ -47,7 +47,7 @@
   </object>
   <object class="GtkDialog" id="window_confirm_cancel">
     <property name="can-focus">False</property>
-    <property name="title" translatable="yes">Cancel flatpak installation?</property>
+    <property name="title" translatable="yes">Cancel Flatpak installation?</property>
     <property name="resizable">False</property>
     <property name="modal">True</property>
     <property name="destroy-with-parent">True</property>
