@@ -5,6 +5,7 @@
 # 
 # Translators:
 # gapan <vlahavas@gmail.com>, 2022
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -13,124 +14,123 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-20 18:20+0300\n"
 "PO-Revision-Date: 2022-05-13 18:36+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>, 2022\n"
-"Language-Team: Greek (https://www.transifex.com/gapan/teams/137470/el/)\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>, 2022\n"
+"Language-Team: Portuguese (https://www.transifex.com/gapan/teams/137470/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: el\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: src/flatpakref-installer.ui:7
 msgid "Installing Flatpak..."
-msgstr "Γίνεται εγκατάσταση του Flatpak..."
+msgstr "A instalar Flatpak..."
 
 #: src/flatpakref-installer.ui:23 src/flatpakref-installer.ui:347
 msgid "Cancel"
-msgstr "Άκυρο"
+msgstr "Cancelar"
 
 #: src/flatpakref-installer.ui:50
 msgid "Cancel Flatpak installation?"
-msgstr "Ακύρωση της εγκατάστασης του Flatpak;"
+msgstr "Cancelar a instalação Flatpak?"
 
 #: src/flatpakref-installer.ui:71
 msgid "Continue Installation"
-msgstr "Συνέχεια της εγκατάστασης"
+msgstr "Continuar a instalação"
 
 #: src/flatpakref-installer.ui:86
 msgid "Cancel Installation"
-msgstr "Ακύρωση της εγκατάστασης"
+msgstr "Cancelar a instalação"
 
 #: src/flatpakref-installer.ui:127
 msgid "Are you sure you want to cancel the installation of this Flatpak?"
-msgstr ""
-"Είστε σίγουροι ότι επιθυμείτε να ακυρώσετε την εγκατάσταση του Flatpak;"
+msgstr "Tem a certeza de que quer cancelar a instalação deste Flatpak?"
 
 #: src/flatpakref-installer.ui:148 flatpakref-installer.desktop.in.h:1
 msgid "Flatpak Installer"
-msgstr "Εγκαταστάτης Flatpak"
+msgstr "Instalador Flatpak"
 
 #: src/flatpakref-installer.ui:171
 msgid "The following software will be installed:"
-msgstr "Το παρακάτω λογισμικό θα εγκατασταθεί:"
+msgstr "Será instalado o seguinte software:"
 
 #: src/flatpakref-installer.ui:193
 msgid "Name:"
-msgstr "Όνομα:"
+msgstr "Nome:"
 
 #: src/flatpakref-installer.ui:208
 msgid "Description:"
-msgstr "Περιγραφή:"
+msgstr "Descrição:"
 
 #: src/flatpakref-installer.ui:223
 msgid "Application ID:"
-msgstr "Ταυτότητα εφαρμογής:"
+msgstr "ID da aplicação:"
 
 #: src/flatpakref-installer.ui:238
 msgid "Version:"
-msgstr "Έκδοση:"
+msgstr "Versão:"
 
 #: src/flatpakref-installer.ui:304
 msgid "Do you want to proceed with the installation?"
-msgstr "Θέλετε να προχωρήσετε με την εγκατάσταση;"
+msgstr "Quer prosseguir com a instalação?"
 
 #: src/flatpakref-installer.ui:326
 msgid "About"
-msgstr "Περί"
+msgstr "Acerca"
 
 #: src/flatpakref-installer.ui:361
 msgid "Install"
-msgstr "Εγκατάσταση"
+msgstr "Instalar"
 
 #: src/flatpakref-installer.ui:404
 msgid "A simple installer for .flatpakref files"
-msgstr "Ένα απλό πρόγραμμα εγκατάστασης αρχείων .flatpakref"
+msgstr "Um instalador simples para ficheiros .flatpakref"
 
 #: src/flatpakref-installer.ui:406
 msgid "translator-credits"
-msgstr "Γιώργος Βλαχάβας <vlahavas@gmail.com>"
+msgstr "Hugo Carvalho <hugokarvalho@hotmail.com>"
 
 #: src/flatpakref-installer.ui:430
 msgid "Flatpak Installation Error"
-msgstr "Σφάλμα κατά την εγκατάσταση του Flatpak"
+msgstr "Erro de instalação Flatpak"
 
 #: src/flatpakref-installer.ui:448 src/flatpakref-installer.ui:527
 msgid "Exit"
-msgstr "Έξοδος"
+msgstr "Sair"
 
 #: src/flatpakref-installer.ui:568
 msgid "Flatpak installation was successful."
-msgstr "Η εγκατάσταση του Flatpak ήταν επιτυχημένη"
+msgstr "A instalação do Flatpak foi bem sucedida."
 
 #: src/flatpakref-installer.py:22
 msgid "USAGE:"
-msgstr "ΧΡΗΣΗ:"
+msgstr "UTILIZAÇÃO:"
 
 #: src/flatpakref-installer.py:36
 msgid "ERROR:"
-msgstr "ΣΦΑΛΜΑ:"
+msgstr "ERRO:"
 
 #: src/flatpakref-installer.py:36
 msgid "invalid arguments"
-msgstr "Μη έγκυροι παράμετροι"
+msgstr "Argumentos inválidos"
 
 #: src/flatpakref-installer.py:165
 msgid "There was an error while installing the Flatpak."
-msgstr "Υπήρξε ένα σφάλμα κατά την εγκατάσταση του Flatpak."
+msgstr "Houve um erro durante a instalação do Flatpak."
 
 #: src/flatpakref-installer.py:166 src/flatpakref-installer.py:232
 #: src/flatpakref-installer.py:242
 msgid "Installation cannot be completed."
-msgstr "Η εγκατάσταση δεν μπορεί να ολοκληρωθεί."
+msgstr "A instalação não pode ser concluída."
 
 #: src/flatpakref-installer.py:167
 msgid "Error code:"
-msgstr "Κωδικός σφάλματος:"
+msgstr "Código de erro:"
 
 #: src/flatpakref-installer.py:231
 msgid "The Flatpak reference file is not valid."
-msgstr "Το αρχείο αναφοράς Flatpak δεν είναι έγκυρο."
+msgstr "O ficheiro de referência Flatpak não é válido."
 
 #: src/flatpakref-installer.py:241
 msgid "Flatpak not found."
-msgstr "Το Flatpak δεν βρέθηκε."
+msgstr "Flatpak não encontrado."
