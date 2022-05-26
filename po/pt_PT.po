@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-20 18:20+0300\n"
+"POT-Creation-Date: 2022-05-26 11:45+0300\n"
 "PO-Revision-Date: 2022-05-13 18:36+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>, 2022\n"
 "Language-Team: Portuguese (Portugal) (https://www.transifex.com/gapan/teams/137470/pt_PT/)\n"
@@ -25,79 +25,47 @@ msgstr ""
 msgid "Installing Flatpak..."
 msgstr "A instalar Flatpak..."
 
-#: src/flatpakref-installer.ui:23 src/flatpakref-installer.ui:347
-msgid "Cancel"
-msgstr "Cancelar"
-
-#: src/flatpakref-installer.ui:50
-msgid "Cancel Flatpak installation?"
-msgstr "Cancelar a instalação Flatpak?"
-
-#: src/flatpakref-installer.ui:71
-msgid "Continue Installation"
-msgstr "Continuar a instalação"
-
-#: src/flatpakref-installer.ui:86
-msgid "Cancel Installation"
-msgstr "Cancelar a instalação"
-
-#: src/flatpakref-installer.ui:127
-msgid "Are you sure you want to cancel the installation of this Flatpak?"
-msgstr "Tem a certeza de que quer cancelar a instalação deste Flatpak?"
-
-#: src/flatpakref-installer.ui:148 flatpakref-installer.desktop.in.h:1
-msgid "Flatpak Installer"
-msgstr "Instalador Flatpak"
-
-#: src/flatpakref-installer.ui:171
-msgid "The following software will be installed:"
-msgstr "Será instalado o seguinte software:"
-
-#: src/flatpakref-installer.ui:193
-msgid "Name:"
-msgstr "Nome:"
-
-#: src/flatpakref-installer.ui:208
-msgid "Description:"
-msgstr "Descrição:"
-
-#: src/flatpakref-installer.ui:223
-msgid "Application ID:"
-msgstr "ID da aplicação:"
-
-#: src/flatpakref-installer.ui:238
-msgid "Version:"
-msgstr "Versão:"
-
-#: src/flatpakref-installer.ui:304
-msgid "Do you want to proceed with the installation?"
-msgstr "Quer prosseguir com a instalação?"
-
-#: src/flatpakref-installer.ui:326
+#: src/flatpakref-installer.ui:29
 msgid "About"
 msgstr "Acerca"
 
-#: src/flatpakref-installer.ui:361
-msgid "Install"
-msgstr "Instalar"
+#: src/flatpakref-installer.ui:45
+msgid "Cancel"
+msgstr "Cancelar"
 
-#: src/flatpakref-installer.ui:404
+#: src/flatpakref-installer.ui:90
 msgid "A simple installer for .flatpakref files"
 msgstr "Um instalador simples para ficheiros .flatpakref"
 
-#: src/flatpakref-installer.ui:406
+#: src/flatpakref-installer.ui:92
 msgid "translator-credits"
 msgstr "Hugo Carvalho <hugokarvalho@hotmail.com>"
 
-#: src/flatpakref-installer.ui:430
+#: src/flatpakref-installer.ui:116
+msgid "Cancel Flatpak installation?"
+msgstr "Cancelar a instalação Flatpak?"
+
+#: src/flatpakref-installer.ui:137
+msgid "Continue Installation"
+msgstr "Continuar a instalação"
+
+#: src/flatpakref-installer.ui:151
+msgid "Cancel Installation"
+msgstr "Cancelar a instalação"
+
+#: src/flatpakref-installer.ui:192
+msgid "Are you sure you want to cancel the installation of this Flatpak?"
+msgstr "Tem a certeza de que quer cancelar a instalação deste Flatpak?"
+
+#: src/flatpakref-installer.ui:213
 msgid "Flatpak Installation Error"
 msgstr "Erro de instalação Flatpak"
 
-#: src/flatpakref-installer.ui:448 src/flatpakref-installer.ui:527
+#: src/flatpakref-installer.ui:231 src/flatpakref-installer.ui:310
 msgid "Exit"
 msgstr "Sair"
 
-#: src/flatpakref-installer.ui:568
+#: src/flatpakref-installer.ui:351
 msgid "Flatpak installation was successful."
 msgstr "A instalação do Flatpak foi bem sucedida."
 
@@ -113,23 +81,22 @@ msgstr "ERRO:"
 msgid "invalid arguments"
 msgstr "Argumentos inválidos"
 
-#: src/flatpakref-installer.py:165
+#: src/flatpakref-installer.py:133
 msgid "There was an error while installing the Flatpak."
 msgstr "Houve um erro durante a instalação do Flatpak."
 
-#: src/flatpakref-installer.py:166 src/flatpakref-installer.py:232
-#: src/flatpakref-installer.py:242
+#: src/flatpakref-installer.py:134 src/flatpakref-installer.py:195
 msgid "Installation cannot be completed."
 msgstr "A instalação não pode ser concluída."
 
-#: src/flatpakref-installer.py:167
+#: src/flatpakref-installer.py:135
 msgid "Error code:"
 msgstr "Código de erro:"
 
-#: src/flatpakref-installer.py:231
+#: src/flatpakref-installer.py:194
 msgid "The Flatpak reference file is not valid."
 msgstr "O ficheiro de referência Flatpak não é válido."
 
-#: src/flatpakref-installer.py:241
-msgid "Flatpak not found."
-msgstr "Flatpak não encontrado."
+#: flatpakref-installer.desktop.in.h:1
+msgid "Flatpak Installer"
+msgstr "Instalador Flatpak"
