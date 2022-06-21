@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Antonio Sardei <laplume@libero.it>, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-26 11:45+0300\n"
+"PO-Revision-Date: 2022-05-13 18:36+0000\n"
+"Last-Translator: Antonio Sardei <laplume@libero.it>, 2022\n"
+"Language-Team: Italian (https://www.transifex.com/gapan/teams/137470/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: src/flatpakref-installer.ui:7
+msgid "Installing Flatpak..."
+msgstr "Sto installando il Flatpak..."
+
+#: src/flatpakref-installer.ui:29
+msgid "About"
+msgstr "Informazioni"
+
+#: src/flatpakref-installer.ui:45
+msgid "Cancel"
+msgstr "Annulla"
+
+#: src/flatpakref-installer.ui:90
+msgid "A simple installer for .flatpakref files"
+msgstr "Un sistema di installazione semplice di file .flatpakref"
+
+#: src/flatpakref-installer.ui:92
+msgid "translator-credits"
+msgstr "Traduzione-Crediti"
+
+#: src/flatpakref-installer.ui:116
+msgid "Cancel Flatpak installation?"
+msgstr "Annulla installazione Flatpak?"
+
+#: src/flatpakref-installer.ui:137
+msgid "Continue Installation"
+msgstr "Prosegui l'installazione"
+
+#: src/flatpakref-installer.ui:151
+msgid "Cancel Installation"
+msgstr "Cancella l'installazione"
+
+#: src/flatpakref-installer.ui:192
+msgid "Are you sure you want to cancel the installation of this Flatpak?"
+msgstr "Sei sicuro di voler annullare l'installazione di questo Flatpak?"
+
+#: src/flatpakref-installer.ui:213
+msgid "Flatpak Installation Error"
+msgstr "Errore di installazione Flatpak"
+
+#: src/flatpakref-installer.ui:231 src/flatpakref-installer.ui:310
+msgid "Exit"
+msgstr "Esci"
+
+#: src/flatpakref-installer.ui:351
+msgid "Flatpak installation was successful."
+msgstr "Installazione Flatpak conclusa con successo."
+
+#: src/flatpakref-installer.py:22
+msgid "USAGE:"
+msgstr "UTILIZZO:"
+
+#: src/flatpakref-installer.py:36
+msgid "ERROR:"
+msgstr "ERRORE:"
+
+#: src/flatpakref-installer.py:36
+msgid "invalid arguments"
+msgstr "Argomenti invalidi"
+
+#: src/flatpakref-installer.py:133
+msgid "There was an error while installing the Flatpak."
+msgstr "Si è verificato un errore durante l'installazione del Flatpak."
+
+#: src/flatpakref-installer.py:134 src/flatpakref-installer.py:195
+msgid "Installation cannot be completed."
+msgstr "L'installazione  non può essere conclusa."
+
+#: src/flatpakref-installer.py:135
+msgid "Error code:"
+msgstr "Codice di errore:"
+
+#: src/flatpakref-installer.py:194
+msgid "The Flatpak reference file is not valid."
+msgstr "Il riferimento al file Flatpkak non è valido."
+
+#: flatpakref-installer.desktop.in.h:1
+msgid "Flatpak Installer"
+msgstr "Installatore Flatpak"
